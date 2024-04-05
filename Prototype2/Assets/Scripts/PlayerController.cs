@@ -7,25 +7,20 @@ public class PlayerController : MonoBehaviour
     //Horizontal input
     private float horizontalInput;
     //Player Speed
-    public float speed = 10.0f;
+    private float speed = 10.0f;
     //x Axis Limit
-    public float xRange = 10.0f;
+    private float xRange = 10.0f;
     //Projectile prefab
-    public GameObject projectilePrefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]private GameObject projectilePrefab;
+     private const string horizontal = "Horizontal";
 
     // Update is called once per frame
     void Update()
     {
         //Get the horizontal input
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis(horizontal);
         //Move the player
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.right *(horizontalInput * Time.deltaTime * speed));
 
         //limit Movement
         if(transform.position.x < -xRange)

@@ -7,26 +7,26 @@ public class PlayerController : MonoBehaviour
     //Jump force
     private float jumpForce = 15.0f;
     //Gravity Modifier
-    [Serializefield] private float gravityModifier;
+    [SerializeField] private float gravityModifier;
     //Are we on the ground?
-    [Serializefield] private bool isOnGround { get; private set;};
+    [SerializeField] private bool isOnGround { get; private set;};
     //Is the Game Over
-    [Serializefield] private bool gameOver { get; private set;};
+    [SerializeField] private bool gameOver { get; private set;};
 
     //Player Animator
     private Animator playerAnim;
 
     //ParticleSystem explosion
-    [Serializefield] private ParticleSystem explositionParticle;
+    [SerializeField] private ParticleSystem explositionParticle;
     //ParticleSystem dirt
-    [Serializefield] private ParticleSystem dirtParticle;
+    [SerializeField] private ParticleSystem dirtParticle;
 
     //Jump sound
-    [Serializefield] private AudioClip jumpSound;
+    [SerializeField] private AudioClip jumpSound;
     //Crash sound
-    [Serializefield] private AudioClip crashSound;
+    [SerializeField] private AudioClip crashSound;
     //Player Audio
-    [Serializefield] private AudioSource playerAudio;
+    [SerializeField] private AudioSource playerAudio;
     private const string gameover = "Game Over!";
     private const string death_b = "Death_b";
     private const string deathtype_int = "DeathType_int";
